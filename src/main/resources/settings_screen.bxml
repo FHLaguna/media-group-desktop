@@ -1,0 +1,107 @@
+<Frame:SettingsScreen title="Laguna's Media Group"
+	maximized="true" xmlns:bxml="http://pivot.apache.org/bxml" bxml:id="settingsScreen"
+	xmlns:Frame="br.com.laguna.media.screen" xmlns="org.apache.pivot.wtk"
+	styles="{backgroundPaint:{paintType:'gradient',
+	    color:'#ffffff',
+	    startX:0, startY:0, startColor:'#000077',
+	    endX:0, endY:400, endColor:'#000022'}}">
+	<TablePane styles="{horizontalSpacing:10, backgroundColor:'0x00000000'}">
+		<columns>
+			<TablePane.Column width="1*" />
+			<TablePane.Column width="1*" />
+		</columns>
+
+		<TablePane.Row height="1*">
+			<Border title="Media files" styles="{padding:2, backgroundColor:'0x00000000', titleColor:'#FFFFFF'}">
+				<TablePane styles="{backgroundColor:'0x00000000'}">
+					<columns>
+						<TablePane.Column width="1*" />
+					</columns>
+					<TablePane.Row height="20">
+						<Label styles="{color:'#FFFFFF'}" text="Select the folder to add..." />
+					</TablePane.Row>
+					<TablePane.Row height="50">
+						<PushButton styles="{backgroundColor:'#1188FF', borderColor:'#1188FF', color:'#FFFFFF', font:'Arial bold 14'}" 
+							bxml:id="addMediaFoldersButton" buttonData="ADD FOLDERS..." />
+					</TablePane.Row>
+					<TablePane.Row height="1*">
+						<ScrollPane horizontalScrollBarPolicy="fill" styles="{backgroundColor:'0x00000000'}">
+							<TablePane bxml:id="mediaFoldersTable"
+								styles="{verticalSpacing:1, showHorizontalGridLines:true, horizontalSpacing:1, showVerticalGridLines:true, backgroundColor:'0x00000000'}">
+								<columns>
+									<TablePane.Column width="7*" />
+									<TablePane.Column width="3*" />
+									<TablePane.Column width="2*" />
+								</columns>
+								<TablePane.Row height="1*">
+									<Label
+										styles="{horizontalAlignment:'center', verticalAlignment:'center', wrapText:true, color:'#FFFFFF'}"
+										text="Folder path" />
+									<Label
+										styles="{horizontalAlignment:'center', verticalAlignment:'center', wrapText:true, color:'#FFFFFF'}"
+										text="Include subfolders" />
+									<Label
+										styles="{horizontalAlignment:'center', verticalAlignment:'center', wrapText:true, color:'#FFFFFF'}"
+										text="Remove" />
+								</TablePane.Row>
+							</TablePane>
+						</ScrollPane>
+					</TablePane.Row>
+				</TablePane>
+			</Border>
+			<Border title="Other settings" styles="{padding:2, backgroundColor:'0x00000000', titleColor:'#FFFFFF'}">
+				<TablePane styles="{backgroundColor:'0x00000000'}">
+					<columns>
+						<TablePane.Column width="1*" />
+					</columns>
+					<TablePane.Row height="20">
+						<Label styles="{color:'#FFFFFF'}" text="VLC Executable File" />
+					</TablePane.Row>
+					<TablePane.Row height="25">
+						<TablePane styles="{padding:2, backgroundColor:'0x00000000'}">
+							<columns>
+								<TablePane.Column width="20*" />
+								<TablePane.Column width="2*" />
+								<TablePane.Column width="80*" />
+							</columns>
+							<TablePane.Row>
+								<PushButton bxml:id="buttonVLCInstallation" buttonData="BROWSE..." 
+									styles="{backgroundColor:'#1188FF', borderColor:'#1188FF', color:'#FFFFFF', font:'Arial bold 10'}" />
+								<Label/>
+								<Label styles="{color:'#FFFFFF'}" bxml:id="labelVLCInstallation" text="The executable file was not set" />
+							</TablePane.Row>
+						</TablePane>
+					</TablePane.Row>
+					<TablePane.Row height="25">
+						<TablePane styles="{padding:2, backgroundColor:'0x00000000'}">
+							<columns>
+								<TablePane.Column width="20*" />
+								<TablePane.Column width="2*" />
+								<TablePane.Column width="80*" />
+							</columns>
+							<TablePane.Row>
+								<Label styles="{color:'#FFFFFF'}" bxml:id="labelPort" text="Port:" />
+								<Label/>
+								<TextInput bxml:id="inputPort" maximumLength="5" />
+							</TablePane.Row>
+						</TablePane>
+					</TablePane.Row>
+					<TablePane.Row height="5">
+						<Label/>
+					</TablePane.Row>
+					<TablePane.Row height="50">
+						<PushButton styles="{backgroundColor:'#339933', borderColor:'#339933', color:'#FFFFFF', font:'Arial bold 14'}"  
+							bxml:id="buttonSave" buttonData="SAVE" />
+					</TablePane.Row>
+					<TablePane.Row height="5">
+						<Label/>
+					</TablePane.Row>
+					<TablePane.Row height="50">
+						<PushButton styles="{backgroundColor:'#bbbbbb', borderColor:'#bbbbbb', color:'#000000', font:'Arial bold 14'}"  
+							bxml:id="buttonBack" buttonData="BACK" />
+					</TablePane.Row>
+				</TablePane>
+			</Border>
+		</TablePane.Row>
+	</TablePane>
+</Frame:SettingsScreen>

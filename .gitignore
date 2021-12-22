@@ -1,0 +1,4 @@
+/target
+/.hg
+/.hgignore
+/ src/main/webapp/react/node_modules
